@@ -15,8 +15,12 @@ public class Report
     public void AddH4(string text) => Sections.Add(new Sections.Heading(text, 4));
     public void AddH5(string text) => Sections.Add(new Sections.Heading(text, 5));
     public void AddH6(string text) => Sections.Add(new Sections.Heading(text, 6));
+    public void AddHr() => Sections.Add(new Sections.Hr());
+    public void AddHtml(string html) => Sections.Add(new Sections.Html(html));
     public void AddImage(string path, bool embed = true) => Sections.Add(new Sections.Image(path, embed));
+    public void AddLineBreak(int count) => Sections.Add(new Sections.LineBreak(count));
     public void AddParagraph(string text) => Sections.Add(new Sections.Paragraph(text));
+    public void AddPlot(ScottPlot.Plot plot) => Sections.Add(new Sections.PlotImage(plot));
 
     public string GetContentHtml()
     {
